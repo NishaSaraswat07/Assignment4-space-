@@ -1,0 +1,33 @@
+.cardSection{
+    color: #fff;
+    letter-spacing: 0.05rem;
+    border: 2px solid #16242E;
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #16242E;
+    box-shadow: 0 0 10px #9ecaed;
+    
+}
+.cardImage img{
+    border-radius: 20px;
+}
+.charData{
+   display: flex;
+   flex-direction: column;
+   margin: 10px;
+}
+.charData h2{
+    margin-bottom: 15px;
+    font-weight: 100;
+    color: #eef4f7;
+    text-shadow: 0 0 10px rgb(230, 241, 247);
+}
+.charData h4{
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+span{
+    color: rgb(29, 232, 140);
+    
+}
