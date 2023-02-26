@@ -1,4 +1,6 @@
 .cardSection{
+    width:400px;
+    height: auto;
     color: #fff;
     letter-spacing: 0.05rem;
     border: 2px solid #16242E;
@@ -7,6 +9,7 @@
     border-radius: 20px;
     background-color: #16242E;
     box-shadow: 0 0 10px #9ecaed;
+    line-height: 1.5rem;
     
 }
 .cardImage img{

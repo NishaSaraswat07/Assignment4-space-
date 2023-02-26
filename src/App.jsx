@@ -2,14 +2,21 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import  CharCards from './components/CharCards'
 import space from './images/space.jpg'
+import ReactPaginate from 'react-paginate'
 
 
 function App() {
-  const [spaceChars, setSpaceChars] = useState([])
- 
+  const [spaceChars, setSpaceChars] = useState([]);
+  const [pageNumber, setPageNumber] = useState(0);
+  const limitPerPage = 6;
+  const pageVisited = pageNumber * limitPerPage;
+  const pageCount = Math.ceil(spaceChars.length/limitPerPage);
+  const pageChange = ({selected})=>{
+    setPageNumber(selected);
+  }
 
   useEffect(()=>{
-    fetch(`https://finalspaceapi.com/api/v0/character?limit=6`)
+    fetch(`https://finalspaceapi.com/api/v0/character`)
     .then((response)=>{
       return response.json()
     })
@@ -27,10 +34,22 @@ function App() {
               </div>
               <div className='cardImage'>
                 {
-                  spaceChars.map((spaceChar)=>
+                  spaceChars.slice(pageVisited,pageVisited+limitPerPage).map((spaceChar)=>
                       <CharCards key={spaceChar.id} {...spaceChar} />
                    )
                 }
+              </div>
+              <div>
+              <ReactPaginate previousLabel={'<'}
+                nextLabel={'>'}
+                pageCount={pageCount}
+                onPageChange = {pageChange}
+                containerClassName={'paginationBttns'}
+                previousLinkClassName={'previousBttn'}
+                nextLinkClassName={'nextBttn'}
+                disabledClassName={'paginationDisabled'}
+                activeClassName={'paginationActive'}
+              />
               </div>
             </div>
           

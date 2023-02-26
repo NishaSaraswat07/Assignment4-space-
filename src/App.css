@@ -36,3 +36,26 @@ h1{
   align-content: space-evenly;
   padding:10px;
 }
+.paginationBttns{
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  color:#fff;
+  margin-top: 20px;
+}
+.paginationBttns a{
+  padding:10px 14px;
+  margin:10px;
+  background-color: #52524f;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.paginationBttns a:hover{
+  background-color: aliceblue;
+  color: #071629;
+}
+.paginationActive a{
+  background-color: aliceblue;
+  color: #071629;
+}
