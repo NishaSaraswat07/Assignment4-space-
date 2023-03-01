@@ -36,6 +36,12 @@ h1{
   align-content: space-evenly;
   padding:10px;
 }
+.designBy{
+  cursor: pointer;
+  color: #e8ed9e;
+  text-decoration: none;
+  margin: 20px;
+}
 .paginationBttns{
   width: 80%;
   height: 40px;

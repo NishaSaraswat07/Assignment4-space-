@@ -51,6 +51,9 @@ function App() {
                 activeClassName={'paginationActive'}
               />
               </div>
+              <a className='designBy' target='_blank'
+               href='https://www.figma.com/file/Tih6FEiBWv6RNu5PUs5cL9/Untitled?node-id=0%3A1&t=GGJCtq4pHaVLKIkE-0https://www.figma.com/file/Tih6FEiBWv6RNu5PUs5cL9/Untitled?node-id=0%3A1&t=GGJCtq4pHaVLKIkE-1' alt="figmalink">
+                 ©Design: By Nisha</a>
             </div>
           
    
